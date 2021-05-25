@@ -19,6 +19,7 @@ public class ControladorPessoa {
 		}
 		return controladorPessoa;
 	}
+	
 	public List<Pessoa> getListaPessoas() {
 		return listaPessoas;
 	}

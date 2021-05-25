@@ -8,5 +8,4 @@ public class Tela {
 	public Tela() {
 		this.sc = new Scanner(System.in);
 	}
-
 }
