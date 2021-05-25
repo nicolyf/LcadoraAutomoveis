@@ -1,21 +1,22 @@
 package model;
 
-public class ClienteEstrangeiro extends Cliente{
+public class ClienteEstrangeiro extends Pessoa{
 	private int passaporte;
 	private String enderecoHospedagem;
 	private int cnhInter;
 	private int periodoPermanencia;
 	
-	public ClienteEstrangeiro(int passaporte, String enderecoHospedagem, int cnhInter, int periodoPermanencia) {
-		super();
+	public ClienteEstrangeiro(String nome, int idade, int passaporte, int cnhInter, String enderecoHospedagem,
+			int periodoPermanencia) {
+		super(nome, idade);
 		this.passaporte = passaporte;
-		this.enderecoHospedagem = enderecoHospedagem;
 		this.cnhInter = cnhInter;
+		this.enderecoHospedagem = enderecoHospedagem;
 		this.periodoPermanencia = periodoPermanencia;
 	}
 
 	public int getPassaporte() {
-		return this.passaporte;
+		return passaporte;
 	}
 
 	public void setPassaporte(int passaporte) {
@@ -23,7 +24,7 @@ public class ClienteEstrangeiro extends Cliente{
 	}
 
 	public String getEnderecoHospedagem() {
-		return this.enderecoHospedagem;
+		return enderecoHospedagem;
 	}
 
 	public void setEnderecoHospedagem(String enderecoHospedagem) {
@@ -31,7 +32,7 @@ public class ClienteEstrangeiro extends Cliente{
 	}
 
 	public int getCnhInter() {
-		return this.cnhInter;
+		return cnhInter;
 	}
 
 	public void setCnhInter(int cnhInter) {
@@ -39,13 +40,12 @@ public class ClienteEstrangeiro extends Cliente{
 	}
 
 	public int getPeriodoPermanencia() {
-		return this.periodoPermanencia;
+		return periodoPermanencia;
 	}
 
 	public void setPeriodoPermanencia(int periodoPermanencia) {
 		this.periodoPermanencia = periodoPermanencia;
 	}
-	
 	
 	
 }
