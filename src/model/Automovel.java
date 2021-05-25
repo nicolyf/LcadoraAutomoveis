@@ -1,7 +1,7 @@
 package model;
 
 public class Automovel {
-	private int categoria;
+	private String categoria;
 	private String placa;
 	private String marca;
 	private String modelo;
@@ -10,7 +10,7 @@ public class Automovel {
 	private int kmInicial;
 	private int kmFinal;
 	
-	public Automovel(int categoria, String placa, String marca, String modelo, int ano, int kmRodado, int kmInicial) {
+	public Automovel(String categoria, String placa, String marca, String modelo, int ano, int kmRodado, int kmInicial) {
 		this.categoria = categoria;
 		this.placa = placa;
 		this.marca = marca;
@@ -20,7 +20,7 @@ public class Automovel {
 		this.kmInicial = kmInicial;
 	}
 	
-	public Automovel(int categoria, String placa, String marca, String modelo, int ano, int kmRodado, int kmInicial, int kmFinal) {
+	public Automovel(String categoria, String placa, String marca, String modelo, int ano, int kmRodado, int kmInicial, int kmFinal) {
 		this.categoria = categoria;
 		this.placa = placa;
 		this.marca = marca;
@@ -34,30 +34,22 @@ public class Automovel {
 		int valorLocacao = kmRodado*this.valorKmRodado();
 	}
 	
-	public int valorKmRodado( ) {
+	public int valorKmRodado() {
 		int valorKmRodado = 0;
-		if(this.getCategoria() == 1) {
-			valorKmRodado = 25;
+		if(this.getCategoria().equalsIgnoreCase("Carga")) {
+			valorKmRodado = 30;
 		}
-		if(this.getCategoria() == 2) {
-			valorKmRodado = 20;
-		}
-		if(this.getCategoria() == 3) {
+		if(this.getCategoria().equalsIgnoreCase("Passeio")) {
 			valorKmRodado = 15;
 		}
-		
-		if(this.getCategoria() == 4) {
-			valorKmRodado = 20;
-		}
-		
 		return valorKmRodado;
 	}
 	
-	public int getCategoria() {
+	public String getCategoria() {
 		return this.categoria;
 	}
 	
-	public void setCategoria(int categoria) {
+	public void setCategoria(String categoria) {
 		this.categoria = categoria;
 	}
 	
